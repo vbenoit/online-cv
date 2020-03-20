@@ -34,7 +34,6 @@ function App() {
       </header>
       <main>
         <section>
-          {/* <img src={logo} className={circleMenuClass} alt="logo" /> */}
           <CircleMenu circleMenuClass={circleMenuClass} />
         </section>
       </main>

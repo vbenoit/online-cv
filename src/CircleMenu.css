@@ -7,20 +7,32 @@
         background-color: #A5ADA5;
         border-radius: 50%;
         height: 50%;
-        height: 50vh;
-        width: 50vh;
+        height: min(50vh, 50vw);
+        width: min(50vh, 50vw);
         margin: auto;
         background: radial-gradient(circle at center, #A5ADA5 0, #7C817C, #3B3C3B 100%);
     }
 
-    .Circle-menu #line-3{
+    .Circle-menu #line-3 {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
 
+    .Circle-menu #line-3-2 {
+        transform: rotate(0deg);
+    }
+
+    .Circle-menu #line-3-4 {
+        transform: rotate(-45deg);
+    }
+
     .Circle-menu-basis {
         transform: scale(0);
+    }
+
+    .rotate {
+        animation: rotateIcon 0.3s ease;
     }
   
     .Circle-menu-in {
@@ -29,6 +41,15 @@
   
     .Circle-menu-out {
         animation: Circle-menu-spin-out 2s ease forwards;
+    }
+}
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        transform: rotate(-20deg) scale(0.9);
     }
 }
 
