@@ -8,7 +8,8 @@ export default function MainContent(props) {
 
     console.log(texts[props.type][props.lang]);
 
-    const content = texts[props.type][props.lang].map( (text) => <TypeWriterDiv text={text} /> );
+    const content = 
+        texts[props.type][props.lang].map( (text) => <TypeWriterDiv key={text.key} text={text.value} /> );
 
     return (
         content
