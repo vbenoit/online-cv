@@ -53,6 +53,28 @@
 	top:1px;
 }
 
+#menu-button:focus {
+  outline: none;
+}
+
 main {
+  position: relative;
   padding: 5vh;
+}
+
+main section {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  margin: auto;
+  z-index: 0;
+}
+
+main nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  z-index: 1;
 }

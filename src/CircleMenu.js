@@ -5,6 +5,8 @@ import JobsIcon from './svg/JobsIcon';
 import DiplomaIcon from './svg/DiplomaIcon';
 import SkillsIcon from './svg/SkillsIcon';
 
+import {skills, jobs, diploma} from './Texts';
+
 
 export default function CircleMenu(props) {
 
@@ -15,6 +17,12 @@ export default function CircleMenu(props) {
     const [skillsIconBaseColor, setSkillsIconBaseColor] = useState(svgBaseColor);
     const [skillsIconBaseClass, setSkillsIconBaseClass] = useState("");
 
+    const [jobsIconBaseColor, setJobsIconBaseColor] = useState(svgBaseColor);
+    const [jobsIconBaseClass, setJobsIconBaseClass] = useState("");
+
+    const [diplomaIconBaseColor, setDiplomaIconBaseColor] = useState(svgBaseColor);
+    const [diplomaIconBaseClass, setDiplomaIconBaseClass] = useState("");
+
     function changeSkillsColor(){
         setSkillsIconBaseColor(activeColor);
         setSkillsIconBaseClass(rotationClass);
@@ -22,6 +30,27 @@ export default function CircleMenu(props) {
             setSkillsIconBaseColor(svgBaseColor);
             setSkillsIconBaseClass("");
         }, 300);
+        props.onClick(skills);
+    }
+
+    function changeJobsColor(){
+        setJobsIconBaseColor(activeColor);
+        setJobsIconBaseClass(rotationClass);
+        setTimeout(()=> { 
+            setJobsIconBaseColor(svgBaseColor);
+            setJobsIconBaseClass("");
+        }, 300);
+        props.onClick(jobs);
+    }
+
+    function changeDiplomaColor(){
+        setDiplomaIconBaseColor(activeColor);
+        setDiplomaIconBaseClass(rotationClass);
+        setTimeout(()=> { 
+            setDiplomaIconBaseColor(svgBaseColor);
+            setDiplomaIconBaseClass("");
+        }, 300);
+        props.onClick(diploma);
     }
 
     return (
@@ -34,12 +63,12 @@ export default function CircleMenu(props) {
             </div>
             <div id="line-3">
                 <div id="line-3-1"></div>
-                <div id="line-3-2" >
-                    <JobsIcon color={svgBaseColor} />
+                <div id="line-3-2" onClick={changeJobsColor} className={jobsIconBaseClass} >
+                    <JobsIcon color={jobsIconBaseColor} />
                 </div>
                 <div id="line-3-3"></div>
-                <div id="line-3-4">
-                    <DiplomaIcon color={svgBaseColor} />
+                <div id="line-3-4" onClick={changeDiplomaColor} className={diplomaIconBaseClass}>
+                    <DiplomaIcon color={diplomaIconBaseColor} />
                 </div>
                 <div id="line-3-5"></div>
             </div>

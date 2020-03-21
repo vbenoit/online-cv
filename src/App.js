@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-//import logo from './logo.svg';
 import './App.css';
 import CircleMenu from './CircleMenu';
+import MainContent from './MainContent';
 
 const circleMenuBasisClass = "Circle-menu-basis";
 const circleMenuInClass = "Circle-menu-in";
@@ -10,6 +10,8 @@ const circleMenuOutClass = "Circle-menu-out";
 function App() {
 
   const [circleMenuClass, setCircleMenuClass] = useState(circleMenuBasisClass);
+  const [contentType, setContentType] = useState("default");
+  const [lang, setLang] = useState("fr_FR");
 
   function toggleCircleMenuClass(){
     if (circleMenuClass === circleMenuBasisClass){
@@ -23,6 +25,11 @@ function App() {
     }
   }
 
+  function changePage(pageName) {
+    setContentType(pageName);
+    toggleCircleMenuClass();
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -34,8 +41,11 @@ function App() {
       </header>
       <main>
         <section>
-          <CircleMenu circleMenuClass={circleMenuClass} />
+          <MainContent type={contentType} lang={lang} />
         </section>
+        <nav>
+          <CircleMenu onClick={changePage} circleMenuClass={circleMenuClass} />
+        </nav>
       </main>
     </div>
   );
