@@ -9,7 +9,6 @@ export default function MainContent(props) {
     const lines = texts[props.type][props.lang];
 
     const [content, setContent] = useState();
-    //const [lineIndex, setLineIndex] = useState(1);
     const [pristine, setPristine] = useState(true);
     const [previousType, setPreviousType] = useState("");
 

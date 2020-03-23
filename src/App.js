@@ -13,14 +13,14 @@ function App() {
   const [contentType, setContentType] = useState("default");
   const [lang, setLang] = useState("fr_FR");
 
-  function toggleCircleMenuClass(){
-    if (circleMenuClass === circleMenuBasisClass){
+  function toggleCircleMenuClass() {
+    if (circleMenuClass === circleMenuBasisClass) {
       setCircleMenuClass(circleMenuInClass);
     }
-    else if (circleMenuClass === circleMenuInClass){
+    else if (circleMenuClass === circleMenuInClass) {
       setCircleMenuClass(circleMenuOutClass);
     }
-    else if (circleMenuClass === circleMenuOutClass){
+    else if (circleMenuClass === circleMenuOutClass) {
       setCircleMenuClass(circleMenuInClass);
     }
   }
@@ -29,6 +29,16 @@ function App() {
     setContentType(pageName);
     toggleCircleMenuClass();
   }
+
+  /* 
+    + ajouter logo vbenoit ou Vincent BENOIT écrit avec une jolie font
+    + made with react 
+    + switch fr/en 
+    + flèches pour menu 
+    + contenu 
+    + quelques logo
+    + ajouter lien vers le dépôt github comme exemple de code
+  */
 
   return (
     <div className="App">
