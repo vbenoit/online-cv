@@ -31,6 +31,7 @@ function App() {
   }
 
   /* 
+    + nouveau bouton 
     + ajouter logo vbenoit ou Vincent BENOIT écrit avec une jolie font
     + made with react 
     + switch fr/en 
