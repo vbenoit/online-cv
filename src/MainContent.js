@@ -10,11 +10,14 @@ export default function MainContent(props) {
 
     const [content, setContent] = useState();
     const [pristine, setPristine] = useState(true);
+    const [previousLang, setPreviousLang] = useState("");
     const [previousType, setPreviousType] = useState("");
 
-    if ( props.type !== previousType ) {
+    if ( props.type !== previousType 
+        || props.lang !== previousLang  ) {
         setPristine(true);
         setPreviousType(props.type);
+        setPreviousLang(props.lang);
     }
 
     function appendElements( lineIndex ) {

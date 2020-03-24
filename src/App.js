@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import CircleMenu from './CircleMenu';
 import MainContent from './MainContent';
+import { en, fr, langSelected } from './Consts';
 
 const circleMenuBasisClass = "Circle-menu-basis";
 const circleMenuInClass = "Circle-menu-in";
@@ -11,7 +12,25 @@ function App() {
 
   const [circleMenuClass, setCircleMenuClass] = useState(circleMenuBasisClass);
   const [contentType, setContentType] = useState("default");
-  const [lang, setLang] = useState("fr_FR");
+  // TODO all occurences of "fr_FR" / "en_EN" in consts files
+  const [lang, setLang] = useState(fr);
+  const [enSelected, setEnSelected] = useState("");
+  const [frSelected, setFrSelected] = useState(langSelected);
+
+  function changeLang(pLang){
+    return function (){
+      setLang(pLang);
+      if ( pLang === fr ){
+        // TODO add to consts
+        setFrSelected(langSelected);
+        setEnSelected("");
+      }
+      else {
+        setFrSelected("");
+        setEnSelected(langSelected);
+      }
+    }
+  }
 
   function toggleCircleMenuClass() {
     if (circleMenuClass === circleMenuBasisClass) {
@@ -39,15 +58,23 @@ function App() {
     + contenu 
     + quelques logo
     + ajouter lien vers le dépôt github comme exemple de code
+    + add sound?
   */
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div id="menu-toggle" >
-          <button id="menu-button" onClick={toggleCircleMenuClass} >
+    <div className="app">
+      <header className="app_header">
+        <div className="app_header-name">
+          Vincent BENOIT
+        </div>
+        <div className="app_header-menu_toggle" >
+          <button className="menu_button" onClick={toggleCircleMenuClass} >
             Menu
           </button>
+        </div>
+        <div className="app_header-lang">
+          <span className={enSelected} onClick={changeLang("en_EN")} >EN</span>&nbsp;&lt;&gt;&nbsp;
+          <span className={frSelected} onClick={changeLang("fr_FR")} >FR</span>
         </div>
       </header>
       <main>

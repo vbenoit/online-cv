@@ -1,4 +1,4 @@
-.App {
+.app {
   text-align: center;
   background-color: #0E0A27;
   height: 100vh;
@@ -6,15 +6,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#menu-toggle button {
-  height: 80%;
-}
 
-.App-header {
+
+.app_header {
   background-color: #17103F;
   min-height: 15vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -22,15 +20,24 @@
   position: relative;
 }
 
-.App-link {
+.app_header div {
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.app_link {
   color: #61dafb;
 }
 
-#menu-button {
+.app_header-menu_toggle button {
+  height: 80%;
+}
+
+.menu_button {
 	box-shadow:inset 0px 1px 3px 0px #91b8b3;
 	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
 	background-color:#768d87;
-	border-radius:5px;
+	/*border-radius:5px;*/
 	border:1px solid #566963;
 	display:inline-block;
 	cursor:pointer;
@@ -43,18 +50,22 @@
 	text-shadow:0px -1px 0px #2b665e;
 }
 
-#menu-button:hover {
+.menu_button:hover {
 	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
 	background-color:#6c7c7c;
 }
 
-#menu-button:active {
+.menu_button:active {
 	position:relative;
 	top:1px;
 }
 
-#menu-button:focus {
+.menu_button:focus {
   outline: none;
+}
+
+.lang-selected {
+  color: #3CF237;
 }
 
 main {
