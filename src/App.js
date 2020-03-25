@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import CircleMenu from './CircleMenu';
 import MainContent from './MainContent';
+import Logo from './svg/Logo';
 import { en, fr, langSelected } from './Consts';
 
 const circleMenuBasisClass = "Circle-menu-basis";
@@ -53,7 +54,6 @@ function App() {
     + nouveau bouton 
     + ajouter logo vbenoit ou Vincent BENOIT écrit avec une jolie font
     + made with react 
-    + switch fr/en 
     + flèches pour menu 
     + contenu 
     + quelques logo
@@ -74,6 +74,7 @@ function App() {
           </button>
         </div>
         <div className="app_header-lang">
+          {/*<span> <Logo  /> </span>*/}
           <span className={enSelected} onClick={changeLang("en_EN")} >EN</span>&nbsp;/&nbsp;
           <span className={frSelected} onClick={changeLang("fr_FR")} >FR</span>
         </div>
