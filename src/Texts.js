@@ -23,23 +23,48 @@ export const texts = {
         ]
     },
     "skills" : {
-        "fr_FR" : [
-            {
-                "key" : "sf1",
-                "value" : "Compétence 1."
-            }, 
-            {
-                "key": "sf2",
-                "value" : "Compétence 2."
-            }
-        ],
         "en_EN" : [
             {
                 "key" : "se1",
-                "value" : "Skill 1."
+                "value" : " Software engineering"
             }, 
             {
                 "key": "se2",
+                "value" : "Object-Oriented Programming in Java, Javascript (ES5, ES6, TypeScript), NodeJS"
+            },
+            {
+                "key": "se3",
+                "value": "Backend & Frontend Software architecture(micro-services, microfrontends), distributed systems"
+            },
+            {
+                "key": "se4",
+                "value": "Asynchronous programming, concurrent programming, generics, recursivity, reactive/functional programming"
+            },
+            {
+                "key": "se5",
+                "value": "SOAP, REST, GraphQL Web services API"
+            },
+            {
+                "key": "se6",
+                "value": "Common design patterns"
+            },
+            {
+                "key": "se7",
+                "value": "Frontend: Angular2+, RXJS, NGRX, Vue.js, React, Redux, React hooks, Jquery"
+            },
+            {
+                "key": "se8",
+                "value": "Java8+, Spring ( Core, MVC, Boot, Data, JDBC ), JAX-RS, JAX-WS, Hibernate, JPA, Struts2, Tiles3, JSTL, OGNL, Swing..."
+            }
+
+        ],
+        "fr_FR" : [
+            {
+                "key" : "sf1",
+                "value" : "Skill 1."
+            }, 
+            {
+                "key": "sf2",
                 "value" : "Skill 2."
             }
         ]

@@ -4,6 +4,7 @@
   height: 100vh;
   color: #3CF237;
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }
 
 
@@ -68,9 +69,14 @@
   color: #3CF237;
 }
 
+.console_green {
+  color: #3CF237;
+}
+
 main {
   position: relative;
-  padding: 5vh;
+  overflow: scroll;
+  height: 85vh;
 }
 
 main section {

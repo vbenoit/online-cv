@@ -16,7 +16,7 @@ export default function TypeWriterDiv(props) {
 
     return (
         <div onAnimationEnd={removeClass} className={divClass} >
-            <p>{props.text}</p>
+            <p>$ _ {props.text}</p>
         </div>
     );
 

@@ -65,7 +65,8 @@ function App() {
     <div className="app">
       <header className="app_header">
         <div className="app_header-name">
-          Vincent BENOIT
+          <div>Vincent BENOIT</div>
+          <div className="console_green" >Senior full stack developer</div>
         </div>
         <div className="app_header-menu_toggle" >
           <button className="menu_button" onClick={toggleCircleMenuClass} >
@@ -73,7 +74,7 @@ function App() {
           </button>
         </div>
         <div className="app_header-lang">
-          <span className={enSelected} onClick={changeLang("en_EN")} >EN</span>&nbsp;&lt;&gt;&nbsp;
+          <span className={enSelected} onClick={changeLang("en_EN")} >EN</span>&nbsp;/&nbsp;
           <span className={frSelected} onClick={changeLang("fr_FR")} >FR</span>
         </div>
       </header>
