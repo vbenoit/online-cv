@@ -1,12 +1,3 @@
-export const fr = "fr_FR";
-export const en = "en_EN";
-
-// TODO merge consts & texts
-
-export const skills = "skills";
-export const jobs = "jobs";
-export const diploma = "diploma";
-
 export const texts = {
     "default" : {
         "fr_FR" : [
@@ -30,31 +21,47 @@ export const texts = {
             }, 
             {
                 "key": "se2",
-                "value" : "Object-Oriented Programming in Java, Javascript (ES5, ES6, TypeScript), NodeJS"
+                "value" : "Java, Javascript (ES5, ES6, TypeScript), NodeJS"
             },
             {
                 "key": "se3",
-                "value": "Backend & Frontend Software architecture(micro-services, microfrontends), distributed systems"
+                "value": "Backend & Frontend Software architecture"
             },
             {
                 "key": "se4",
-                "value": "Asynchronous programming, concurrent programming, generics, recursivity, reactive/functional programming"
+                "value" : "Micro-services, Microfrontends, distributed systems"
             },
             {
                 "key": "se5",
-                "value": "SOAP, REST, GraphQL Web services API"
+                "value": "Asynchronous programming, concurrent programming, generics"
             },
             {
                 "key": "se6",
-                "value": "Common design patterns"
+                "value":"reactive/functional programming"
             },
             {
                 "key": "se7",
-                "value": "Frontend: Angular2+, RXJS, NGRX, Vue.js, React, Redux, React hooks, Jquery"
+                "value": "SOAP, REST, GraphQL Web services API"
             },
             {
                 "key": "se8",
-                "value": "Java8+, Spring ( Core, MVC, Boot, Data, JDBC ), JAX-RS, JAX-WS, Hibernate, JPA, Struts2, Tiles3, JSTL, OGNL, Swing..."
+                "value": "Common design patterns"
+            },
+            {
+                "key": "se9",
+                "value": "Frontend: Angular2+, RXJS, Vue.js, React (hooks), Jquery"
+            },
+            {
+                "key": "se10",
+                "value": "Java8+, JAX-RS, JAX-WS"
+            },
+            {
+                "key": "se11",
+                "value": "Spring ( Core, MVC, Boot, Data, JDBC )"
+            },
+            {
+                "key": "se12",
+                "value": "JPA, Struts2, Tiles3, JSTL, OGNL, Swing..."
             }
 
         ],

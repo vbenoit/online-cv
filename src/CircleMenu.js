@@ -5,7 +5,7 @@ import JobsIcon from './svg/JobsIcon';
 import DiplomaIcon from './svg/DiplomaIcon';
 import SkillsIcon from './svg/SkillsIcon';
 
-import {skills, jobs, diploma} from './Texts';
+import {skills, jobs, diploma} from './Consts';
 
 
 export default function CircleMenu(props) {

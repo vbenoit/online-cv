@@ -79,19 +79,18 @@ main {
   height: 85vh;
 }
 
-main section {
+.centered {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, 10%);
+}
+
+main section {
   margin: auto;
   z-index: 0;
 }
 
 main nav {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 10%);
   z-index: 1;
 }

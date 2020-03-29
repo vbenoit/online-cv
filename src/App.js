@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import CircleMenu from './CircleMenu';
 import MainContent from './MainContent';
-import Logo from './svg/Logo';
-import { en, fr, langSelected } from './Consts';
+import { fr, langSelected } from './Consts';
 
 const circleMenuBasisClass = "Circle-menu-basis";
 const circleMenuInClass = "Circle-menu-in";
@@ -13,7 +12,6 @@ function App() {
 
   const [circleMenuClass, setCircleMenuClass] = useState(circleMenuBasisClass);
   const [contentType, setContentType] = useState("default");
-  // TODO all occurences of "fr_FR" / "en_EN" in consts files
   const [lang, setLang] = useState(fr);
   const [enSelected, setEnSelected] = useState("");
   const [frSelected, setFrSelected] = useState(langSelected);
@@ -22,7 +20,6 @@ function App() {
     return function (){
       setLang(pLang);
       if ( pLang === fr ){
-        // TODO add to consts
         setFrSelected(langSelected);
         setEnSelected("");
       }
@@ -52,13 +49,10 @@ function App() {
 
   /* 
     + nouveau bouton 
-    + ajouter logo vbenoit ou Vincent BENOIT écrit avec une jolie font
     + made with react 
-    + flèches pour menu 
     + contenu 
     + quelques logo
     + ajouter lien vers le dépôt github comme exemple de code
-    + add sound?
   */
 
   return (
@@ -74,16 +68,15 @@ function App() {
           </button>
         </div>
         <div className="app_header-lang">
-          {/*<span> <Logo  /> </span>*/}
           <span className={enSelected} onClick={changeLang("en_EN")} >EN</span>&nbsp;/&nbsp;
           <span className={frSelected} onClick={changeLang("fr_FR")} >FR</span>
         </div>
       </header>
       <main>
-        <section>
+        <section className="centered">
           <MainContent type={contentType} lang={lang} />
         </section>
-        <nav>
+        <nav className="centered">
           <CircleMenu onClick={changePage} circleMenuClass={circleMenuClass} />
         </nav>
       </main>
